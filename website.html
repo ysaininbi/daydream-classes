@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DAYDREAM TUITION CLASSES</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#241b35}header{padding:15px 20px;box-shadow:0 2px 12px #0001;position:sticky;top:0;background:#fff;z-index:5}.nav{max-width:1150px;margin:auto;display:flex;justify-content:space-between}.logo{font-weight:900;color:#6d28d9;font-size:21px}nav a{margin-left:20px;text-decoration:none;color:#332a43;font-weight:bold}.hero{background:linear-gradient(135deg,#35106d,#6d28d9,#a855f7);color:#fff;padding:90px 20px}.container{max-width:1150px;margin:auto}.hero h1{font-size:56px;margin:10px 0}.hero p{font-size:19px}.btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:bold;border:0;cursor:pointer;margin:8px 8px 0 0}.white{background:#fff;color:#6d28d9}.outline{background:transparent;color:#fff;border:1px solid #fff}section{padding:70px 20px}.title{text-align:center;margin-bottom:35px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{padding:25px;border:1px solid #eee;border-radius:18px;box-shadow:0 8px 25px #32105d0d}.purple{background:#f7f1ff}.contact{background:#171225;color:#fff}.contact a{color:#e9d5ff}.modal{display:none;position:fixed;inset:0;background:#0009;z-index:20;align-items:center;justify-content:center;padding:18px}.box{background:#fff;border-radius:20px;padding:28px;width:min(480px,100%);position:relative}.close{position:absolute;right:15px;top:8px;border:0;background:none;font-size:28px}label{display:block;font-weight:bold;margin:12px 0 5px}input,select{width:100%;padding:13px;border:1px solid #ddd;border-radius:9px}.submit{width:100%;background:#6d28d9;color:#fff;border:0;padding:14px;border-radius:9px;font-weight:bold;margin-top:16px}
+@media(max-width:800px){nav{display:none}.hero h1{font-size:42px}.cards{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><div class="nav"><div class="logo">DAYDREAM TUITION CLASSES</div><nav><a href="#courses">Courses</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+<section class="hero"><div class="container"><div>MATHEMATICS • CONCEPT • PRACTICE • RESULTS</div><h1>Learn Mathematics.<br><span style="color:#f0abfc">Dream Bigger.</span></h1><p>Mathematics coaching for Class 5–12, JEE, B.Sc. and M.Sc.</p><button class="btn white" onclick="openForm()">New Student — Enquiry</button></div></section>
+<section id="courses"><div class="container"><div class="title"><h2>Our Courses</h2></div><div class="cards">
+<div class="card"><h3>Class 5–8</h3><p>Strong fundamentals and problem solving.</p></div><div class="card"><h3>Class 9–10</h3><p>NCERT and board preparation.</p></div><div class="card"><h3>Class 11–12</h3><p>Advanced Mathematics and exams.</p></div><div class="card"><h3>JEE Mathematics</h3><p>PYQs, concepts and advanced practice.</p></div><div class="card"><h3>B.Sc. Mathematics</h3><p>University-level Mathematics.</p></div><div class="card"><h3>M.Sc. Mathematics</h3><p>Higher Mathematics preparation.</p></div>
+</div></div></section>
+<section id="about" class="purple"><div class="container"><div class="title"><h2>Why Daydream?</h2><p>Concept clarity • Regular practice • Tests • Personal guidance</p></div></div></section>
+<section id="contact" class="contact"><div class="container"><h2>Start Your Learning Journey</h2><p>Admission and batch details ke liye enquiry form fill karein.</p><button class="btn white" onclick="openForm()">Admission / Enquiry</button></div></section>
+<footer style="background:#0f0b17;color:#aaa;text-align:center;padding:22px">© 2026 DAYDREAM TUITION CLASSES</footer>
+
+<div id="modal" class="modal"><div class="box"><button class="close" onclick="closeForm()">×</button><h2>Student Enquiry Form</h2><form id="form">
+<label>Name *</label><input name="name" required><label>Class *</label><select name="class_name" required><option value="">Select</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>JEE</option><option>B.Sc.</option><option>M.Sc.</option></select>
+<label>Contact Number *</label><input name="phone" type="tel" pattern="[0-9]{10}" maxlength="10" required><button class="submit">Submit Enquiry</button></form></div></div>
+<script>
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbxigPUVAFZtQ0BeEpxX3naASAvQKnetP0ubd3b7l_pLuFuI7u8KxCPbZtQh3pIzeCmMaA/exec";
+function openForm(){document.getElementById("modal").style.display="flex"}function closeForm(){document.getElementById("modal").style.display="none"}
+const vid=localStorage.getItem("ddVisitorId")||("v_"+Date.now()+"_"+Math.random().toString(36).slice(2));localStorage.setItem("ddVisitorId",vid);
+function send(payload){if(SCRIPT_URL.includes("PASTE_"))return;fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",body:JSON.stringify(payload)}).catch(()=>{});}
+send({type:"visit",visitorId:vid,page:location.pathname,referrer:document.referrer,userAgent:navigator.userAgent});
+document.getElementById("form").onsubmit=function(e){e.preventDefault();const d=Object.fromEntries(new FormData(this));send({...d,type:"lead",page:location.pathname,userAgent:navigator.userAgent});alert("Enquiry submitted successfully!");this.reset();closeForm()};
+</script></body></html>

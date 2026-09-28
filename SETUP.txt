@@ -1,0 +1,7 @@
+DAYDREAM TUITION CLASSES – DEPLOYMENT PACKAGE
+
+Google Apps Script URL is already connected in the website files.
+
+Deploy on Vercel by uploading this ZIP. The homepage file is index.html.
+
+IMPORTANT: admin.html is a dashboard page. Keep its URL private because it displays student enquiry data.
